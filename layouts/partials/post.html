@@ -1,0 +1,84 @@
+<a href="{{ .Permalink }}">
+  <div class="post-title">
+    <img src="{{ "/images/post-title-icon.svg" | absURL }}" />
+    <div class="post-meta">
+      <time>{{ .Date.Format "02 Jan 2006, 15:04" }}</time>
+      <h1>{{ .Title }}</h1>
+    </div>
+  </div>
+</a>
+
+<div class="post-toc">
+  <span class="title">
+    Table of contents
+  </span>
+  {{ .TableOfContents }}
+</div>
+
+<section class="post-content">
+  {{ .Content }}
+</section>
+
+<div class="share">
+  <a href="http://www.facebook.com/sharer.php?src=bm&u={{ .Permalink }}&t={{ .Title }}" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
+  <a href="http://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
+  <a href="https://plus.google.com/share?url={{ .Permalink }}" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
+  <a href="http://getpocket.com/edit?url={{ .Permalink }}&title={{ .Title }}" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
+</div>
+
+<div class="post-meta-code">
+  <div class="desc">
+    public string description() {
+    <div class="desc">val author = "
+    {{ with .Params.author }}
+        {{ . }}
+    {{ else }}
+        <a href="mailto:{{ .Site.Author.email }}">{{ .Site.Author.name }}</a>
+    {{ end }}";
+    </div>
+    {{ if isset .Params "categories" }}
+    <div class="desc">
+      val categories = [
+      {{ $baseUrl := .Site.BaseURL }}
+      {{ range .Params.categories }}
+      <a href="{{ $baseUrl }}/categories/{{ . | urlize }}">"{{ . }}"</a>
+      {{ end }}
+      ];
+    </div>
+    {{ end }}
+    }
+  </div>
+</div>
+<div class="post-meta-code">
+  <div class="desc">
+    public string tags() {
+      <div class="desc">
+        val tags = [
+        {{ with .Params.tags }}
+          {{ range . }}
+          <a href="{{ $.Site.BaseURL}}tags/{{ . | urlize }}">"{{ . }}"</a>
+          {{ end }}
+        {{ end }}
+        ];
+      </div>
+    }
+  </div>
+</div>
+{{ template "_internal/disqus.html" . }}
+
+<div class="paging post-paging">
+  {{ if .Prev }}
+  <a class="left" href="{{ .Prev.Permalink }}" rel="prev">
+    <i class="fa fa-caret-left" aria-hidden="true"></i> <span>{{ .Prev.Title }}</span>
+  </a>
+  {{ end }}
+  {{ if .Next }}
+  <a class="right" href="{{ .Next.Permalink }}" rel="next">
+    <span>{{ .Next.Title }}</span> <i class="fa fa-caret-right" aria-hidden="true"></i>
+  </a>
+  {{ end }}
+</div>
+
+<div class="seperator">
+  <img src="{{ "/images/seperator.svg" | absURL }}" />
+</div>

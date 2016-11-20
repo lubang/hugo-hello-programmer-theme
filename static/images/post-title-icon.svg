@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>post-icon-bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="post-item" fill="#00B2A0">
+            <g id="post-icon">
+                <g>
+                    <path d="M0,22 C0,34.1502645 9.8497355,44 22,44 L42.2368365,44 C43.2106048,44 44,43.2170084 44,42.2368365 L44,22 C44,9.8497355 34.1502645,0 22,0 C9.8497355,0 0,9.8497355 0,22 Z" id="post-icon-bg"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

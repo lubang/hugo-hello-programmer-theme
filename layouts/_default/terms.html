@@ -1,0 +1,31 @@
+{{ partial "header" . }}
+
+<div class="post-title">
+    <img src="{{ "/images/post-title-icon.svg" | absURL }}" />
+    <div class="post-meta">
+      <time>---</time>
+      <h1>CATEGORIES</h1>
+    </div>
+  </div>
+
+  <div class="categories">
+    <ul>
+    {{ $baseurl := .Site.BaseURL }}
+    {{ $data := .Data }}
+    {{ range $key,$value := .Data.Terms.ByCount }}
+      <li>
+        <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
+          {{ $value.Name }}
+          <div class="count">{{ $value.Count }} posts</div>
+        </a>
+      </li>
+    {{ end }}
+    </ul>
+  </div>
+</div>
+
+<div class="seperator">
+  <img src="{{ "/images/seperator.svg" | absURL }}" />
+</div>
+
+{{ partial "footer" . }}

@@ -1,0 +1,14 @@
+# theme.toml template for a Hugo theme
+
+name = "Hello Programmer"
+license = "MIT"
+licenselink = "https://github.com/lubang/hugo-hello-programmer-theme/blob/master/LICENSE.md"
+description = "Hugo Blog theme for a programmer"
+homepage = "https://github.com/lubang/hugo-hello-programmer-theme/"
+tags = ["blog", "hugo", "lulab", "donggeun", "bang"]
+features = ["blog", "simple", "programmer"]
+min_version = 0.15
+
+[author]
+  name = "DONGGEUN, BANG"
+  homepage = "http://blog.lulab.net"
