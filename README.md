@@ -20,8 +20,8 @@ Modify your configuration:
 
     $ vi config.toml
 
-    baseurl = "http://blog.lulab.net/"
-    title = "LUBANG BLOG"
+    baseurl = "your-site-address"
+    title = "your-site-name"
     languageCode = "ko-KR"
 
     theme = "hello-programmer"
@@ -37,6 +37,10 @@ Modify your configuration:
         disqusShortname = "XXXX"
         googleAnalytics = "UA-XXXXXXXX-X"
 
+Modify your theme image:
+
+    static/images/logo.svg
+    static/images/post-title-icon.svg
 
 
 ## License
