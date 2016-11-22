@@ -10,24 +10,24 @@
     <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />
     {{ end }}
     <link rel="stylesheet" href="{{ "/css/styles.css" | absURL }}">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
     <div class="navbar">
         <ul>
-            <li><a href="/">HOME</a></li>
-            <li><a href="/categories">CATEGORIES</a></li>
-            <li><a href="/project">PROJECTS</a></li>
+            <li><a href="{{ "/" | absURL }}">HOME</a></li>
+            <li><a href="{{ "/categories" | absURL }}">CATEGORIES</a></li>
+            <li><a href="{{ "/project" | absURL }}">PROJECTS</a></li>
         </ul>
     </div>
     <div class="container">
       <div class="title">
         <div>
-          <a href="/">
+          <a href="{{ "/" | absURL }}">
             <img src="{{ "/images/logo.svg" | absURL }}" />
           </a>
         </div>

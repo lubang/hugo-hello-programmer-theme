@@ -26,16 +26,14 @@ Modify your configuration:
 
     theme = "hello-programmer"
 
-    # Pagination
     paginate = 2
+
+    disqusShortname = "XXXX"
+    googleAnalytics = "UA-XXXXXXXX-X"
 
     [author]
         name = "your-name"
         email = "your-email"
-
-    [Params]
-        disqusShortname = "XXXX"
-        googleAnalytics = "UA-XXXXXXXX-X"
 
 Modify your theme image:
 
