@@ -1,6 +1,6 @@
 <a href="{{ .Permalink }}">
   <div class="post-title">
-    <img src="{{ "/images/post-title-icon.svg" | absURL }}" />
+    <img src="{{ "/images/post-title-icon.svg" | relURL }}" />
     <div class="post-meta">
       <time>{{ .Date.Format "02 Jan 2006, 15:04" }}</time>
       <h1>{{ .Title }}</h1>
@@ -63,22 +63,4 @@
       </div>
     }
   </div>
-</div>
-{{ template "_internal/disqus.html" . }}
-
-<div class="paging post-paging">
-  {{ if .Prev }}
-  <a class="left" href="{{ .Prev.Permalink }}" rel="prev">
-    <i class="fa fa-caret-left" aria-hidden="true"></i> <span>{{ .Prev.Title }}</span>
-  </a>
-  {{ end }}
-  {{ if .Next }}
-  <a class="right" href="{{ .Next.Permalink }}" rel="next">
-    <span>{{ .Next.Title }}</span> <i class="fa fa-caret-right" aria-hidden="true"></i>
-  </a>
-  {{ end }}
-</div>
-
-<div class="seperator">
-  <img src="{{ "/images/seperator.svg" | absURL }}" />
 </div>

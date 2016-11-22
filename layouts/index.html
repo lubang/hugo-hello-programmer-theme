@@ -1,6 +1,9 @@
 {{ partial "header.html" . }}
 {{ range .Paginator.Pages }}
   {{ partial "post.html" . }}
+  <div class="seperator">
+    <img src="{{ "/images/seperator.svg" | relURL }}" />
+  </div>
 {{ end }}
 
 {{ partial "pagination.html" . }}
