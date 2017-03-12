@@ -4,7 +4,7 @@
 <div class="post-list-item">
   <a href="{{ .Permalink }}">
     <div class="post-title">
-      <img src="{{ "/images/post-title-icon.svg" | relURL }}" />
+      <img src="{{ "/images/post-title-icon.png" | relURL }}" />
       <div class="post-meta">
         <time>{{ .Date.Format "02 Jan 2006, 15:04" }}</time>
         <h1>{{ .Title }}</h1>
@@ -17,7 +17,7 @@
 {{ partial "pagination.html" . }}
 
 <div class="seperator">
-  <img src="{{ "/images/seperator.svg" | relURL }}" />
+  <img src="{{ "/images/seperator.png" | relURL }}" />
 </div>
 
 {{ partial "footer.html" . }}

@@ -37,8 +37,8 @@ Modify your configuration:
 
 Modify your theme image:
 
-    static/images/logo.svg
-    static/images/post-title-icon.svg
+    static/images/logo.png
+    static/images/post-title-icon.png
 
 
 ## License
