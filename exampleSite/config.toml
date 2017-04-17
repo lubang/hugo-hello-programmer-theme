@@ -2,7 +2,8 @@ baseurl = "your-site-address"
 title = "your-site-name"
 languageCode = "ko-KR"
 
-theme = "hello-programmer"
+theme = "hugo-hello-programmer-theme"
+themesdir = "../.."
 
 paginate = 2
 
