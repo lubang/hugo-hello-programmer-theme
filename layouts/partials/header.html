@@ -2,32 +2,32 @@
 <html>
 
 <head>
-    <base href="{{ .Site.BaseURL }}">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>{{ .Title }} {{ if ne .Title .Site.Title }} &middot; {{ .Site.Title }}{{ end }}</title>
-    <link rel="icon" href="{{ "/favicon.ico" | relURL }}" type="image/x-icon">
-    <link rel="canonical" href="{{ .Permalink }}">
-    {{ if .RSSLink }}
-    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />
-    {{ end }}
-    <link rel="stylesheet" href="{{ "/css/styles.css" | relURL }}">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+  <base href="{{ .Site.BaseURL }}">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>{{ .Title }} {{ if ne .Title .Site.Title }} &middot; {{ .Site.Title }}{{ end }}</title>
+  <link rel="icon" href="{{ "/favicon.ico" | relURL }}" type="image/x-icon">
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ if .RSSLink }}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />
+  {{ end }}
+  <link rel="stylesheet" href="{{ "/css/styles.css" | relURL }}">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
-    <div class="navbar">
-        <ul>
-            <li><a href="{{ "/" | relURL }}" class="logo-title">HELLO,WORLD!</a></li>
-            <li><a href="{{ "/categories" | relURL }}">CATEGORIES</a></li>
-            <li><a href="{{ "/tags" | relURL }}">TAGS</a></li>
-        </ul>
+  <div class="navbar">
+    <ul>
+      <li><a href="{{ "/" | relURL }}" class="logo-title">HELLO,WORLD!</a></li>
+      <li><a href="{{ "/categories" | relURL }}">CATEGORIES</a></li>
+      <li><a href="{{ "/tags" | relURL }}">TAGS</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="title">
+      <a href="{{ "/" | relURL }}">
+        <img src="{{ "/images/logo@2x.png" | relURL }}" width="260px" height="48px" />
+      </a>
     </div>
-    <div class="container">
-      <div class="title">
-        <a href="{{ "/" | relURL }}">
-          <img src="{{ "/images/logo@2x.png" | relURL }}" width="260px" height="48px" />
-        </a>
-      </div>

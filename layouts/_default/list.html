@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-{{ range .Data.Pages }}
+{{ range .Paginator.Pages }}
   {{ .Render "summary"}}
   <hr class="summary-sep" />
 {{ end }}

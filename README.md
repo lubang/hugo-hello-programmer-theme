@@ -37,7 +37,7 @@ Modify your configuration:
 
 Modify your theme image:
 
-    static/images/logo.png
+    static/images/logo@2X.png
     static/images/post-title-icon.png
 
 
