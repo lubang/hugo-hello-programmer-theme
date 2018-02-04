@@ -173,7 +173,7 @@ dt {
 }
 
 .post-meta, .post-meta a, .post-meta a:visited {
-  display: inline-block;
+  display: block;
   color: #4A4A4A;
   font-size: 14px;
   line-height: 1.7em;
@@ -338,6 +338,25 @@ dt {
 
 .categories .count {
   float: right;
+}
+
+/*
+* Tags
+*/
+.tags {
+  padding: 0px 30px 30px 30px;
+}
+
+.tags .tag {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 10px 5px 10px;
+  border: 1px dashed #dddddd;
+  border-radius: 5px;
+}
+
+.tags .tag:hover {
+  background-color: #eeeeee;
 }
 
 /*
