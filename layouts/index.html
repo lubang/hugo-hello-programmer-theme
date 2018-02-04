@@ -1,7 +1,8 @@
 {{ partial "header.html" . }}
+
 {{ range .Paginator.Pages }}
-  {{ partial "post.html" . }}
-  <div class="margin"></div>
+  {{ .Render "summary"}}
+  <hr class="summary-sep" />
 {{ end }}
 
 {{ partial "pagination.html" . }}

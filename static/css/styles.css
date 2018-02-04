@@ -132,6 +132,31 @@ dt {
   margin: 14px 0px 14px 0px;
 }
 
+/*
+* summary
+*/
+
+.summary-sep {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 60px 0px 40px 0px;
+}
+
+.summary-content {
+  color: #717171;
+  font-size: 0.8em;
+  line-height: 1.6em;
+}
+
+.summary-more, .summary-more:visited {
+  padding: 1px 5px 1px 5px;
+  border-radius: 5px;
+  background-color: #00B2A0;
+  font-size: 0.75em;
+  color: white;
+}
 
 /*
 * Post
@@ -334,12 +359,4 @@ dt {
   padding: 0px 10px 0px 10px;
   float: right;
   color: #717171;
-}
-
-/*
-* Util
-*/
-
-.margin {
-  height: 80px;
 }
