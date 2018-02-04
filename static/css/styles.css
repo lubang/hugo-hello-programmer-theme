@@ -316,17 +316,25 @@ dt {
 */
 .categories {
   padding: 0px 10px 0px 10px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+}
+
+.categories ul {
+  list-style-type: none;
+  margin: 0px;
 }
 
 .categories li {
-  padding: 12px;
+  padding: 10px;
 }
 
 .categories li:hover {
   background-color: #e3e3e3;
 }
 
+.categories .icon {
+  margin-right: 15px;
+}
 
 .categories .count {
   float: right;

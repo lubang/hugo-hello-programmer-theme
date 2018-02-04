@@ -12,10 +12,11 @@
     <ul>
     {{ $baseurl := .Site.BaseURL }}
     {{ $data := .Data }}
-    {{ range $key,$value := .Data.Terms.ByCount }}
+    {{ range $key,$value := .Data.Terms.Alphabetical }}
       <li>
         <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
-          {{ $value.Name }}
+          <i class="fa fa-angle-right icon" aria-hidden="true"></i>
+          {{ humanize $value.Name }}
           <div class="count">{{ $value.Count }} posts</div>
         </a>
       </li>
