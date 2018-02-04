@@ -263,6 +263,9 @@ dt {
   color: #00B2A0;
 }
 
+.post-comment {
+  margin: 30px 0px 20px 0px;
+}
 
 /*
 * Pagination

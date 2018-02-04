@@ -2,7 +2,9 @@
 
 {{ partial "post.html" . }}
 
-{{ template "_internal/disqus.html" . }}
+<div class="post-comment">
+  {{ template "_internal/disqus.html" . }}
+</div>
 
 <div class="paging post-paging">
   {{ if .Prev }}
