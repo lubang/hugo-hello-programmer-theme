@@ -20,18 +20,14 @@
 <body>
     <div class="navbar">
         <ul>
-            <li><a href="{{ "/" | relURL }}">HOME</a></li>
+            <li><a href="{{ "/" | relURL }}" class="logo-title">HELLO,WORLD!</a></li>
             <li><a href="{{ "/categories" | relURL }}">CATEGORIES</a></li>
-            <li><a href="{{ "/project" | relURL }}">PROJECTS</a></li>
+            <li><a href="{{ "/projects" | relURL }}">PROJECTS</a></li>
         </ul>
     </div>
     <div class="container">
       <div class="title">
-        <div>
-          <a href="{{ "/" | relURL }}">
-            <img src="{{ "/images/logo.png" | relURL }}" />
-          </a>
-        </div>
-        <div><img src="{{ "/images/seperator.png" | relURL }}" /></div>
-        <div class="logo-title">hello, world!</div>
+        <a href="{{ "/" | relURL }}">
+          <img src="{{ "/images/logo@2x.png" | relURL }}" width="260px" height="48px" />
+        </a>
       </div>

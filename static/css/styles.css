@@ -13,31 +13,31 @@ html, body, h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 27px;
   margin-top: 50px;
   margin-bottom: 10px;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 24px;
   margin-top: 50px;
   margin-bottom: 10px;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 21px;
   margin-top: 50px;
   margin-bottom: 10px;
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 50px;
   margin-bottom: 10px;
 }
 
 h5 {
-  font-size: 14px;
+  font-size: 15px;
   margin-top: 50px;
   margin-bottom: 10px;
 }
@@ -64,6 +64,7 @@ dt {
 
 .seperator {
   clear: left;
+  color: #717171;
   text-align: center;
   padding: 45px;
 }
@@ -83,19 +84,31 @@ dt {
 
 .navbar ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0px 20px 0px 20px;
 }
 
-.navbar li a {
-  float: left;
-  padding: 8px 10px 8px 10px;
-  font-size: 12px;
-  color: #FFFFFF;
+.navbar li {
+  display: inline-block;
+  padding: 0px 8px 0px 8px;
   letter-spacing: 1.5px;
+  font-size: 12px;
+}
+
+.navbar li a {
+  color: #FFFFFF;
   text-decoration: none;
 }
 
+.navbar li a:hover {
+  color: #00B2A0;
+}
+
+.navbar .logo-title {
+  font-weight: bold;
+  color: #cccccc;
+  padding-right: 10px;
+}
 
 /*
 * container
@@ -103,24 +116,16 @@ dt {
 
 .container {
   margin: auto;
-  max-width: 1000px;
+  max-width: 800px;
   padding: 40px 30px 15px 30px;
-  font-size: 17px;
-  line-height: 1.5em;
+  font-size: 18px;
+  line-height: 1.8em;
+  color: #333e4c;
 }
 
 .container .title {
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 80px;
-}
-
-.container .logo-title {
-  padding-top: 10px;
-  font-weight: bold;
-  font-size: 16px;
-  color: #00B2A0;
-  letter-spacing: 3.03px;
+  padding: 50px 0px 80px 0px;
 }
 
 .post-list-item {
@@ -145,16 +150,19 @@ dt {
 .post-meta, .post-meta a, .post-meta a:visited {
   display: inline-block;
   color: #4A4A4A;
+  font-size: 14px;
+  line-height: 1.7em;
 }
 
 .post-meta h1 {
-  font-size: 26px;
-  margin-top: 3px;
-  margin-bottom: 10px;
+  color: #00B2A0;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  line-height: 1.2em;
 }
 
 .post-meta time {
-  font-size: 14px;
+  margin-bottom: 0px;
 }
 
 .post-toc {
@@ -163,6 +171,7 @@ dt {
   padding: 20px 25px 20px 25px;
   background-color: #f5f5f5;
   font-size: .8rem;
+  line-height: 1.8em;
 }
 
 .post-toc a, .post-toc a:visited {
@@ -183,6 +192,14 @@ dt {
   margin-top: 20px;
 }
 
+.post-content hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 60px 0px 40px 0px;
+}
+
 .post-meta-code {
   background-color: #f5f5f5;
   padding: 10px;
@@ -193,8 +210,8 @@ dt {
 }
 
 .post-meta-code a, .post-meta-code a:visited {
-  letter-spacing: 1.5px;
   color: #A0A0A0;
+  font-weight: 400;
 }
 
 .post-meta-code .desc {
@@ -225,15 +242,16 @@ dt {
 /*
 * Pagination
 */
+
 .paging {
-  margin-bottom: 15px;
+  margin: 20px 0px 15px 0px;
   color: #00B2A0;
   font-size: 1.4rem;
   text-align: center;
 }
 
 .paging a, a:visited {
-  margin: 0px 10px 0px 10px;
+  margin: 0px;
 }
 
 .paging a, span {
@@ -250,6 +268,7 @@ dt {
 
 .post-paging {
   margin-top: 15px;
+  height: 40px;
 }
 
 /*
@@ -315,4 +334,12 @@ dt {
   padding: 0px 10px 0px 10px;
   float: right;
   color: #717171;
+}
+
+/*
+* Util
+*/
+
+.margin {
+  height: 80px;
 }

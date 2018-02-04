@@ -2,8 +2,6 @@
 
 {{ partial "post.html" . }}
 
-<div class="share"></div>
-
 {{ template "_internal/disqus.html" . }}
 
 <div class="paging post-paging">
@@ -17,12 +15,6 @@
     <span>{{ .Next.Title }}</span> <i class="fa fa-caret-right" aria-hidden="true"></i>
   </a>
   {{ end }}
-</div>
-
-<div class="share"></div>
-
-<div class="seperator">
-  <img src="{{ "/images/seperator.png" | relURL }}" />
 </div>
 
 {{ partial "footer.html" . }}
