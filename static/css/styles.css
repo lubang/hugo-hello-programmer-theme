@@ -1,10 +1,10 @@
 /*
 * HELLO-PROGRAMMER Theme CSS
 */
-@import url(//cdnjs.cloudflare.com/ajax/libs/spoqa-han-sans/2.1.1/css/SpoqaHanSans-kr.min.css);
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 * {
-  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-family: 'Nanum Gothic', 'Sans-serif';
 }
 
 html, body, h1, h2, h3, h4, h5 {
@@ -82,14 +82,13 @@ img {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 30px;
   background: #4A4A4A;
 }
 
 .navbar ul {
   list-style-type: none;
-  margin: 0 auto;
-  padding: 0px 20px 0px 20px;
+  padding: 10px;
+  margin: 0;
 }
 
 .navbar li {
@@ -97,6 +96,7 @@ img {
   padding: 0px 8px 0px 8px;
   letter-spacing: 1.5px;
   font-size: 12px;
+  font-weight: bolder;
 }
 
 .navbar li a {
@@ -122,8 +122,8 @@ img {
   margin: auto;
   max-width: 800px;
   padding: 40px 30px 15px 30px;
-  font-size: 18px;
-  line-height: 1.8em;
+  font-size: 16px;
+  line-height: 1.65em;
   color: #333e4c;
 }
 
@@ -150,7 +150,6 @@ img {
 
 .summary-content {
   color: #717171;
-  font-size: 0.8em;
   line-height: 1.6em;
 }
 
