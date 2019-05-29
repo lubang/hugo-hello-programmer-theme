@@ -2,21 +2,4 @@
 
 {{ partial "post.html" . }}
 
-<div class="post-comment">
-  {{ template "_internal/disqus.html" . }}
-</div>
-
-<div class="paging post-paging">
-  {{ if .Prev }}
-  <a class="left" href="{{ .Prev.Permalink }}" rel="prev">
-    <i class="fa fa-caret-left" aria-hidden="true"></i> <span>{{ .Prev.Title }}</span>
-  </a>
-  {{ end }}
-  {{ if .Next }}
-  <a class="right" href="{{ .Next.Permalink }}" rel="next">
-    <span>{{ .Next.Title }}</span> <i class="fa fa-caret-right" aria-hidden="true"></i>
-  </a>
-  {{ end }}
-</div>
-
 {{ partial "footer.html" . }}

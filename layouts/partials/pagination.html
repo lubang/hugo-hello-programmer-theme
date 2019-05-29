@@ -1,13 +1,17 @@
 <div class="paging">
   {{ if .Paginator.HasPrev }}
   <a href="{{ .Paginator.Prev.URL }}" rel="prev">
+    이전
     <i class="fa fa-caret-left" aria-hidden="true"></i>
   </a>
   {{ end }}
-  PAGE {{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }}
+  <span class="page">
+    페이지 {{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }}
+  </span>
   {{ if .Paginator.HasNext }}
   <a href="{{ .Paginator.Next.URL }}" rel="next">
     <i class="fa fa-caret-right" aria-hidden="true"></i>
+    다음
   </a>
   {{ end }}
 </div>

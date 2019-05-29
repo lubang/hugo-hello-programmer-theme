@@ -1,10 +1,9 @@
 {{ partial "header.html" . }}
-
-{{ range .Paginator.Pages }}
+<div class="container">
+  {{ range.Paginator.Pages }}
   {{ .Render "summary"}}
   <hr class="summary-sep" />
-{{ end }}
-
+  {{ end }}
+</div>
 {{ partial "pagination.html" . }}
-
 {{ partial "footer.html" . }}

@@ -1,15 +1,22 @@
-<a href="{{ .Permalink }}">
+<div class="post">  
   <div class="post-title">
-    <img src="{{ "/images/post-title-icon.png" | relURL }}" />
-    <div class="post-meta">
-      <time>{{ .Date.Format "02 Jan 2006, 15:04" }}</time>
-      <h1>{{ .Title }}</h1>
-    </div>
+    <a href="{{ .Permalink }}">
+      <img src="{{ "/images/post-title-icon.png" | relURL }}" />
+      <div class="post-meta">
+        <time>{{ .Date.Format "2006년 01월 02일 15시 04분" }}</time>
+        <h1>{{ .Title }}</h1>
+      </div>
+    </a>
   </div>
-</a>
-<div class="summary-content">
-  {{ .Summary }}
-  {{ if .Truncated }}
-  <a href="{{ .RelPermalink }}" class="summary-more">READ MORE</a>
+  {{ if .Params.cover }}
+  <div class="cover-image">
+    <img src="{{ .Params.cover }}" />
+  </div>
   {{ end }}
+  <div>    
+    {{ .Summary }}
+    {{ if .Truncated }}
+    <a href="{{ .RelPermalink }}" class="summary-more">더보기</a>
+    {{ end }}
+  </div>
 </div>

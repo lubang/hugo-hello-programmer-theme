@@ -1,43 +1,59 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  {{ if .Site.GoogleAnalytics }}
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', '{{ .Site.GoogleAnalytics }}');
-  </script>
-  {{ end }}
-
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>{{ .Title }} {{ if ne .Title .Site.Title }} &middot; {{ .Site.Title }}{{ end }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }} {{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}</title>
   <link rel="icon" href="{{ "/favicon.ico" | relURL }}" type="image/x-icon">
   <link rel="canonical" href="{{ .Permalink }}">
   {{ if .RSSLink }}
   <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />
   {{ end }}
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/agate.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
   <link rel="stylesheet" href="{{ "/css/styles.css" | relURL }}">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
+  {{ if .Site.GoogleAnalytics }}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ .Site.GoogleAnalytics }}');
+  </script>
+  {{ end }}
+  <script type="text/javascript">
+  function toggle_visibility(id) {
+    var e = document.getElementById(id);
+    if (e.style.display === 'block')
+      e.style.display = 'none';
+    else
+      e.style.display = 'block';
+  }
+  </script>
 </head>
-
 <body>
   <div class="navbar">
-    <ul>
-      <li><a href="{{ "/" | relURL }}" class="logo-title">HELLO,WORLD!</a></li>
-      <li><a href="{{ "/categories" | relURL }}">CATEGORIES</a></li>
-      <li><a href="{{ "/tags" | relURL }}">TAGS</a></li>
-    </ul>
-  </div>
-  <div class="container">
-    <div class="title">
+    <div class="logo">
       <a href="{{ "/" | relURL }}">
-        <img src="{{ "/images/logo.png" | relURL }}" width="260px" height="48px" />
+        <img src="{{ "/images/logo.png" | relURL }}" height="34px" />
       </a>
     </div>
+    <div class="burger">
+      <button onclick="toggle_visibility('menu')">
+        <i class="fa fa-bars" aria-hidden="true"></i> 메뉴
+      </button>
+    </div>
+    <div id="menu" class="menu">
+      <ul>
+        <li><a href="{{ "/" | relURL }}">#{{ .Site.Title }}</a></li>
+        <li><a href="{{ "/categories" | relURL }}">#카테고리</a></li>
+        <li><a href="{{ "/tags" | relURL }}">#태그</a></li>
+        <li><a href="{{ "/projects" | relURL }}">#프로젝트</a></li>        
+      </ul>
+      <input class="search" id="search-input" type="search" placeholder="검색어" value="">
+    </div>
+  </div>
+  <div class="container">    
