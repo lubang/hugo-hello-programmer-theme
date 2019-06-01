@@ -5,10 +5,10 @@ license = "MIT"
 licenselink = "https://github.com/lubang/hugo-hello-programmer-theme/blob/master/LICENSE.md"
 description = "Hugo Blog theme for a programmer"
 homepage = "https://github.com/lubang/hugo-hello-programmer-theme/"
-tags = ["blog", "hugo", "lulab", "donggeun", "bang"]
+tags = ["blog", "hugo", "lulab", "donggeun", "bang", "lubang", "programmer"]
 features = ["blog", "simple", "programmer"]
 min_version = 0.15
 
 [author]
   name = "DONGGEUN, BANG"
-  homepage = "http://blog.lulab.net"
+  homepage = "https://blog.lulab.net"

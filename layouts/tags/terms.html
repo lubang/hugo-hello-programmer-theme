@@ -1,23 +1,19 @@
 {{ partial "header" . }}
 
-<div class="post-title">
-  <img src="{{ "/images/post-title-icon.png" | relURL }}" />
-  <div class="post-meta">
-    <time>#tags</time>
-    <h1>TAGS</h1>
-  </div>
-</div>
-
 <div class="tags">
-  {{ $baseurl := .Site.BaseURL }}
-  {{ $data := .Data }}
-  {{ range $key,$value := .Data.Terms.Alphabetical }}
-  <div class="tag">
-    <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
-      {{ humanize $value.Name }}
-    </a>
+  <h1>TAGS</h1>
+  <p>태그 별 글을 볼 수 있습니다.</p>
+  <div class="tag-list">
+    {{ $baseurl := .Site.BaseURL }}
+    {{ $data := .Data }}
+    {{ range $key,$value := .Data.Terms.Alphabetical }}
+    <div class="tag">
+      <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
+        {{ $value.Name }} <small>({{ $value.Count }})</small>
+      </a>
+    </div>
+    {{ end }}   
   </div>
-  {{ end }}   
 </div>
 
 {{ partial "footer" . }}

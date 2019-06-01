@@ -1,27 +1,30 @@
 {{ partial "header" . }}
 
-<div class="post-title">
-  <img src="{{ "/images/post-title-icon.png" | relURL }}" />
-  <div class="post-meta">
-    <time>#categories</time>
-    <h1>CATEGORIES</h1>
-  </div>
-</div>
-
 <div class="categories">
+  <h1>CATEGORIES</h1>
+  <p>카테고리 별 글을 볼 수 있습니다. 최근 글은 제목을 클릭하여 바로 읽을 수 있습니다.</p>
   <ul>
     {{ $baseurl := .Site.BaseURL }}
     {{ $data := .Data }}
     {{ range $key,$value := .Data.Terms.Alphabetical }}
     <li>
-      <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
-        <i class="fa fa-angle-right icon" aria-hidden="true"></i>
-        {{ humanize $value.Name }}
-        <div class="count">{{ $value.Count }} posts</div>
-      </a>
+      <span class="title">
+        <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
+          <i class="fa fa-angle-right icon" aria-hidden="true"></i>
+          {{ upper $value.Name }} ({{ $value.Count }}개)
+        </a>
+      </span>
+      <span class="links">
+        {{ range first 1 $value.WeightedPages }}
+        <a href="{{ .Permalink }}">
+          <small>{{ .Date.Format "2006-01-02" }}</small>
+          <span class="recent-title">{{ .Name }}</span>
+        </a>
+        {{ end }}
+      </span>
     </li>
     {{ end }}
-  </ul>  
+  </ul>
 </div>
 
 {{ partial "footer" . }}
