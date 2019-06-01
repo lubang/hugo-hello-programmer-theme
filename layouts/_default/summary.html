@@ -1,6 +1,6 @@
-<div class="post">  
+<div class="post">
   <div class="post-title">
-    <a href="{{ .Permalink }}">
+    <a href="{{ .Permalink }}" title="{{ .Title }}">
       <img src="{{ "/images/post-title-icon.png" | relURL }}" />
       <div class="post-meta">
         <time>{{ .Date.Format "2006년 01월 02일 15시 04분" }}</time>
@@ -10,10 +10,12 @@
   </div>
   {{ if .Params.cover }}
   <div class="cover-image">
-    <img src="{{ .Params.cover }}" />
+    <a href="{{ .Permalink }}" title="{{ .Title }}">
+      <img src="{{ .Params.cover }}" />
+    </a>
   </div>
   {{ end }}
-  <div>    
+  <div>
     {{ .Summary }}
     {{ if .Truncated }}
     <a href="{{ .RelPermalink }}" class="summary-more">더보기</a>

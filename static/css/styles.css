@@ -15,9 +15,7 @@ img {
 
 /* Navbar */
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
+  height: 40px;
   background: white;
   padding: 8px 16px 4px 16px;
   border-bottom: #eeeeee solid 1px;
@@ -27,12 +25,14 @@ img {
 }
 .navbar > .menu {
   margin-right: 40px;
+  z-index: 10;
 }
 .navbar > .burger {
   display: none;
 }
 .navbar > .menu > ul {
   display: inline;
+  background: white;
 }
 .navbar > .menu > ul > li {
   display: inline-block;
@@ -64,7 +64,6 @@ img {
   .navbar > .burger {
     text-align: right;
     display: block;
-    margin-right: 60px;
   }
   .navbar > .burger button {
     border: none;
@@ -80,16 +79,25 @@ img {
     background-color: #00ccaa;
   }
   .navbar > .menu {
-    display: none;
-    background-color: #eeeeee;
+    position: relative;
+    top: 11px;
+    padding: 5px;
+    margin: 0px;
+    background-color: white;
+    border-left: #eeeeee solid 1px;
+    border-right: #eeeeee solid 1px;
+    border-bottom: #eeeeee solid 1px;
   }
   .navbar > .menu > ul {
     display: block;
-    padding: 10px;
+    margin: 4px 0 4px 0;
   }
   .navbar > .menu > ul > li {
     padding: 5px;
     display: block;
+  }
+  .navbar > .hidden {
+    display: none;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -100,7 +108,7 @@ img {
 
 /* Container */
 .container {
-  margin-top: 54px;
+  width: 100%;
   background: #f4f4f4;
 }
 
@@ -163,7 +171,8 @@ img {
 }
 .post .post-meta h1 {
   color: #00b2a0;
-  margin: 0px 0px 40px 0px;
+  margin: -4px 0px 40px 0px;
+  line-height: 1.2em;
 }
 .post .post-meta time {
   margin-bottom: 0px;
@@ -194,6 +203,16 @@ img {
 .post .post-toc ul {
   margin: 5px 0px 5px 0px;
   padding-left: 20px;
+}
+@media screen and (max-width: 550px) {
+  .post .post-toc {
+    position: relative;
+    margin-bottom: 1em;
+    padding: 5px;
+    background-color: #f5f5f5;
+    font-size: 0.8em;
+    line-height: 1.8em;
+  }
 }
 
 .post .post-content h1,
@@ -261,11 +280,16 @@ img {
 }
 .post .share a {
   display: inline-block;
-  margin: 0 1em;
+  margin: 0 0.5em;
   border-bottom: none;
 }
 .post .share a:hover i {
   color: #00b2a0;
+}
+@media screen and (max-width: 550px) {
+  .post .share {
+    margin: 0 0 15px 0;
+  }
 }
 
 .post .post-meta-code {
@@ -302,6 +326,24 @@ img {
   height: 180px;
   object-fit: cover;
 }
+.post .cover-image a {
+  border-bottom: none;
+}
+.post .footnote-ref {
+  line-height: 0;
+}
+@media screen and (max-width: 550px) {
+  .post .footnotes a {
+    display: block;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: none;
+  }
+  .post .footnotes a:hover {
+    border: none;
+  }
+}
 
 /* Pagination */
 .paging {
@@ -317,6 +359,45 @@ img {
 }
 .paging a:hover {
   border-bottom: #00b2a0 solid 4px;
+}
+
+/* Go Top */
+.go-top {
+  position: fixed;
+  right: 16px;
+  bottom: 4px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+.go-top-button {
+  margin: 10px auto;
+  display: block;
+  background-color: #cccccc;
+  border: none;
+  border-radius: 5em;
+  padding: 0.7em;
+  width: 45px;
+  height: 45px;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+.go-top-button:hover {
+  background-color: #00ccaa;
+}
+.go-top-button i {
+  margin-top: -0.1em;
+  font-size: 1em;
+  display: block;
+}
+@media screen and (max-width: 1250px) {
+  .go-top {
+    position: static;
+    width: 100%;
+    padding: 0;
+  }
 }
 
 /* Footer */
@@ -372,6 +453,11 @@ img {
   color: #a0a0a0;
 }
 @media screen and (max-width: 1000px) {
+  .categories > ul > li .links .recent-title {
+    display: none;
+  }
+}
+@media screen and (max-width: 550px) {
   .categories > ul > li .links {
     display: none;
   }
@@ -423,4 +509,9 @@ img {
   padding: 0px 10px 0px 10px;
   float: right;
   color: #717171;
+}
+
+/* Ads */
+.ads {
+  text-align: center;
 }

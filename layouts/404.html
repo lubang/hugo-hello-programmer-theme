@@ -1,8 +1,10 @@
 {{ partial "header.html" . }}
-<div style="text-align: center;">
-  <p>Sorry! It's nobody in here.</p>
-  <h1>404 Not Found</h1>
-  <p>---</p>
-  <p><a href="{{ "/" | relURL }}">Go to home</a></p>
+<div class="post">
+  <h1 style="font-size: 5em; color: #eeeeee; line-height: 1em;">잘못된 공간입니다__404</h1>
+  <h2>이왕 오신 김에 <a href="{{ "/" | relURL }}">"{{ .Site.Title }}"</a> 를 한 번 확인해보세요.</h2>
+  <p>그 곳에 원하던 내용이 있을 수 있습니다.</p>
+  <div style="text-align: center;">
+    <h1><a href="{{ "/" | relURL }}">첫 화면으로</a></h1>
+  </div>
 </div>
 {{ partial "footer.html" . }}

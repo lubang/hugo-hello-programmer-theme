@@ -16,7 +16,10 @@
       </span>
       <span class="links">
         {{ range first 1 $value.WeightedPages }}
-        <a href="{{ .Permalink }}"><small>{{ .Date.Format "2006-01-02" }}</small>{{ .Name }}</a>
+        <a href="{{ .Permalink }}">
+          <small>{{ .Date.Format "2006-01-02" }}</small>
+          <span class="recent-title">{{ .Name }}</span>
+        </a>
         {{ end }}
       </span>
     </li>
