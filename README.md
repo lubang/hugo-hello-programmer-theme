@@ -22,24 +22,29 @@ Modify your configuration:
 
     baseurl = "your-site-address"
     title = "your-site-name"
+
     languageCode = "ko-KR"
-
-    theme = "hello-programmer"
-
-    paginate = 2
-
+    theme = "hugo-hello-programmer-theme"
     disqusShortname = "XXXX"
     googleAnalytics = "UA-XXXXXXXX-X"
+    paginate = 7
 
     [author]
         name = "your-name"
         email = "your-email"
 
-Modify your theme image:
+    [params]
+        description = "desribe-your-site"
 
-    static/images/logo@2X.png
-    static/images/post-title-icon.png
+Modify images for your site:
 
+    static/images/logo@.png (Left top logo image)
+    static/images/thumbnail.png (OpenGraph tag for preview)
+
+
+## References
+
+Guide for Korean: https://blog.lulab.net/projects/2019-05-hugo-hello-programmer-theme-v2/
 
 ## License
 
