@@ -10,5 +10,5 @@ features = ["blog", "simple", "programmer"]
 min_version = 0.15
 
 [author]
-  name = "DONGGEUN, BANG"
+  name = "LUBANG (DONGGEUN, BANG)"
   homepage = "https://blog.lulab.net"

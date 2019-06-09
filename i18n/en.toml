@@ -1,0 +1,92 @@
+###################
+# Menu
+###################
+[menuCategories]
+other = "Categories"
+
+[menuTags]
+other = "Tags"
+
+[menuProjects]
+other = "Projects"
+
+[menuBurgerTitle]
+other = "Menu"
+
+[menuSearchKeyword]
+other = "Keyword"
+
+[menuOgDescPostfix]
+other = "read this article."
+
+###################
+# Footer
+###################
+[footerToTheTop]
+other = "Top"
+
+###################
+# Pagination
+###################
+[paginationPage]
+other = "Page"
+
+[paginationPrev]
+other = "Prev"
+
+[paginationNext]
+other = "Next"
+
+###################
+# Post
+###################
+[postAuthorPrefix]
+other = "Friendly"
+
+[postAuthorPostfix]
+other = "wrotes this article at"
+
+[postDatetime]
+other = "{{ .Format \"Monday, Jan 2, 2006 15:04\" }}"
+
+[postDatetimePostfix]
+other = "for you."
+
+[postToc]
+other = "TOC"
+
+[postRecommendArticles]
+other = "Recommend these articles"
+
+[postReadMore]
+other = "More"
+
+###################
+# Category
+###################
+[categoriesDescription]
+other = "Read an article by categories. You can read the recent article when you click the title."
+
+[categoriesCount]
+other = " EA"
+
+###################
+# Tag
+###################
+[tagsDescription]
+other = "Read an article by tags."
+
+###################
+# Not found 404
+###################
+[notFoundTitle]
+other = "NOT FOUND__404"
+
+[notFoundSubTitle]
+other = "While you're here, check the site again."
+
+[notFoundDescription]
+other = "The link may have changed, please check the tag!! There may be something you want there :)"
+
+[notFoundGoToHome]
+other = "Go to the main"

@@ -3,7 +3,7 @@
     <a href="{{ .Permalink }}" title="{{ .Title }}">
       <img src="{{ "/images/post-title-icon.png" | relURL }}" />
       <div class="post-meta">
-        <time>{{ .Date.Format "2006년 01월 02일 15시 04분" }}</time>
+        <time>{{ i18n "postDatetime" .Date }}</time>
         <h1>{{ .Title }}</h1>
       </div>
     </a>
@@ -18,7 +18,7 @@
   <div>
     {{ .Summary }}
     {{ if .Truncated }}
-    <a href="{{ .RelPermalink }}" class="summary-more">더보기</a>
+    <a href="{{ .RelPermalink }}" class="summary-more">{{ i18n "postReadMore" }}</a>
     {{ end }}
   </div>
 </div>
