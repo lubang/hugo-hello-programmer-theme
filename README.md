@@ -24,6 +24,7 @@ Modify your configuration:
     title = "your-site-name"
 
     languageCode = "ko-KR"
+    DefaultContentLanguage = "kr"
     theme = "hugo-hello-programmer-theme"
     disqusShortname = "XXXX"
     googleAnalytics = "UA-XXXXXXXX-X"
@@ -41,6 +42,14 @@ Modify images for your site:
     static/images/logo@.png (Left top logo image)
     static/images/thumbnail.png (OpenGraph tag for preview)
 
+## Multilingual
+
+Configure your language. Now support these languages. (updated 2019-06-09)
+
+* kr (Korean, 한국어)
+* en (English, a little bit stupid sentence :( Plz. Pull-request for this theme)
+
+> You can pull request other languages or fix native sentence from exist language pack.
 
 ## References
 

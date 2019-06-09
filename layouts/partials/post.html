@@ -3,13 +3,13 @@
     <a href="{{ .Permalink }}">
       <img src="{{ "/images/post-title-icon.png" | relURL }}" />
       <div class="post-meta">
-        <time>{{ .Date.Format "2006년 01월 02일 15시 04분" }}</time>
+        <time>{{ i18n "postDatetime" .Date }}</time>
         <h1>{{ .Title }}</h1>
       </div>
     </a>
   </div>
   <div class="post-toc">
-    <span class="title">차례</span>
+    <span class="title">{{ i18n "postToc" }}</span>
     {{ .TableOfContents }}
   </div>
   <section class="post-content">
@@ -17,40 +17,42 @@
   </section>
   <div class="share">    
     <a
-      href="http://www.facebook.com/sharer.php?src=bm&u={{ .Permalink }}&t={{ .Title }}"
+      href="//www.facebook.com/sharer.php?src=bm&u={{ .Permalink }}&t={{ .Title }}"
       onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
       ><i class="fa fa-facebook"></i
     ></a>
     <a
-      href="http://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}&tw_p=tweetbutton"
+      href="//twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}&tw_p=tweetbutton"
       onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
       ><i class="fa fa-twitter"></i
     ></a>
     <a
-      href="http://getpocket.com/edit?url={{ .Permalink }}&title={{ .Title }}"
+      href="//getpocket.com/edit?url={{ .Permalink }}&title={{ .Title }}"
       onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
       ><i class="fa fa-get-pocket"></i
     ></a>
     <a
-      href="https://plus.google.com/share?url={{ .Permalink }}"
+      href="//plus.google.com/share?url={{ .Permalink }}"
       onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
       ><i class="fa fa-google-plus"></i
     ></a>
   </div>
   <div class="post-meta-code">
     <div class="desc">
-      친절한
+      {{ i18n "postAuthorPrefix" }}
       {{ with.Params.author }}
       {{ . }}
       {{ else }}
       <a href="mailto:{{ .Site.Author.email }}">{{ .Site.Author.name }}</a>
       {{ end }}
-      님이 <span class="highlight">{{ .Date.Format "2006년 01월 02일 15시 04분" }}</span> 에 작성한 글입니다.
+      {{ i18n "postAuthorPostfix" }}
+      <span class="highlight">{{ i18n "postDatetime" .Date }}</span> 
+      {{ i18n "postDatetimePostfix" }}
     </div>
     <div class="desc">
       {{ if isset .Params "categories" }}
       <div class="desc">
-        _구분
+        <span class="fixed-desc">_{{ i18n "menuCategories" }}</span>
         {{ $baseUrl := .Site.BaseURL }}
         {{ range.Params.categories }}
         <a href="{{ $baseUrl }}/categories/{{ . | urlize }}">#{{ . }}</a>
@@ -58,7 +60,7 @@
       </div>
       {{ end }}
       <div class="desc">
-        _태그
+        <span class="fixed-desc">_{{ i18n "menuTags" }}</span>
         {{ with.Params.tags }}
         {{ range . }}
         <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">#{{ . }}</a>
@@ -73,7 +75,7 @@
   </div>
   {{ end }}
   <div class="recommend-articles">
-    다음으로 읽을만한 글입니다.
+    {{ i18n "postRecommendArticles"}}
     <ul>
       {{ if .Prev }}
       <li>
@@ -91,15 +93,4 @@
       {{ end }}
     </ul>
   </div>
-  <div class="ads">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- 룰루랄라코딩 하단광고 -->
-    <ins class="adsbygoogle"
-        style="display:inline-block;width:100%;height:90px"
-        data-ad-client="ca-pub-5115425690914720"
-        data-ad-slot="5156216152"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>    
 </div>

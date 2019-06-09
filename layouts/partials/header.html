@@ -4,7 +4,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ .Title }} {{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}</title>
-  <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ $.Site.Params.description}} '{{ .Title }}'을 한 번 살펴보세요.{{ end }}">
+  <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ $.Site.Params.description}} '{{ .Title }}'{{ i18n "menuOgDescPostfix" }}{{ end }}">
   <meta property="og:title" content="{{ .Title }}">
   {{ if .IsPage }}
   <meta property="og:type" content="article">
@@ -12,7 +12,7 @@
   {{ else }}
   <meta property="og:type" content="website">
   {{ end }}
-  <meta property="og:description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ $.Site.Params.description}} '{{ .Title }}'을 한 번 살펴보세요.{{ end }}">
+  <meta property="og:description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ $.Site.Params.description}} '{{ .Title }}'{{ i18n "menuOgDescPostfix" }}{{ end }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:site_name" content="{{ .Site.Title }}">
   {{ if .Params.cover }}
@@ -64,17 +64,17 @@
     </div>
     <div class="burger">
       <button onclick="toggle_visibility('menu')">
-        <i class="fa fa-bars" aria-hidden="true"></i> 메뉴
+        <i class="fa fa-bars" aria-hidden="true"></i> {{ i18n "menuBurgerTitle" }}
       </button>
     </div>
     <div id="menu" class="menu hidden">
       <ul>
         <li><a href="{{ "/" | relURL }}">#{{ .Site.Title }}</a></li>
-        <li><a href="{{ "/categories" | relURL }}">#카테고리</a></li>
-        <li><a href="{{ "/tags" | relURL }}">#태그</a></li>
-        <li><a href="{{ "/projects" | relURL }}">#프로젝트</a></li>        
+        <li><a href="{{ "/categories" | relURL }}">#{{ i18n "menuCategories" }}</a></li>
+        <li><a href="{{ "/tags" | relURL }}">#{{ i18n "menuTags" }}</a></li>
+        <li><a href="{{ "/projects" | relURL }}">#{{ i18n "menuProjects" }}</a></li>        
       </ul>
-      <input class="search" id="search-input" type="search" placeholder="검색어" value="">
+      <input class="search" id="search-input" type="search" placeholder="{{ i18n "menuSearchKeyword" }}" value="">
     </div>
   </div>
   <div class="container">    
