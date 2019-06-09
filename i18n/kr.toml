@@ -1,0 +1,92 @@
+###################
+# Menu
+###################
+[menuCategories]
+other = "카테고리"
+
+[menuTags]
+other = "태그"
+
+[menuProjects]
+other = "프로젝트"
+
+[menuBurgerTitle]
+other = "메뉴"
+
+[menuSearchKeyword]
+other = "검색어"
+
+[menuOgDescPostfix]
+other = "을 한 번 살펴보세요."
+
+###################
+# Footer
+###################
+[footerToTheTop]
+other = "위로"
+
+###################
+# Pagination
+###################
+[paginationPage]
+other = "페이지"
+
+[paginationPrev]
+other = "이전"
+
+[paginationNext]
+other = "다음"
+
+###################
+# Post
+###################
+[postAuthorPrefix]
+other = "친절한"
+
+[postAuthorPostfix]
+other = "님이"
+
+[postDatetime]
+other = "{{ .Format \"2006년 01월 02일 15시 04분\" }}"
+
+[postDatetimePostfix]
+other = "에 작성한 글입니다."
+
+[postToc]
+other = "차례"
+
+[postRecommendArticles]
+other = "다음으로 읽을만한 글입니다."
+
+[postReadMore]
+other = "더보기"
+
+###################
+# Category
+###################
+[categoriesDescription]
+other = "카테고리 별 글을 볼 수 있습니다. 최근 글은 제목을 클릭하여 바로 읽을 수 있습니다."
+
+[categoriesCount]
+other = "개"
+
+###################
+# Tag
+###################
+[tagsDescription]
+other = "태그 별 글을 볼 수 있습니다."
+
+###################
+# Not found 404
+###################
+[notFoundTitle]
+other = "잘못된 공간입니다__404"
+
+[notFoundSubTitle]
+other = "이왕 오신 김에 사이트를 다시 한 번 확인해보세요."
+
+[notFoundDescription]
+other = "링크가 변경되었을 수 있습니다. 태그를 한 번 확인해보세요!! 그 곳에 원하던 내용이 있을 수 있습니다 :)"
+
+[notFoundGoToHome]
+other = "첫 화면으로"

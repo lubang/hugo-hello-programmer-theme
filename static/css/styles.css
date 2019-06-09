@@ -309,6 +309,10 @@ img {
 .post .post-meta-code .desc {
   padding-left: 10px;
 }
+.post .post-meta-code .desc .fixed-desc {
+  display: inline-block;
+  min-width: 90px;
+}
 .post .post-meta-code .highlight {
   color: black;
 }
